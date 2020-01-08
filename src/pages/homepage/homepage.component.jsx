@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
 import './homepage.style.scss';
+import Directory from '../../components/directory/directory.component'
 const Homepage=()=>{
    return ( <div className="homepage">
-<div className="directory-menu">
-    <div className="menu-item">
-        <div className="content">
-            <h1 className="title"> HATS
-                <span className="subtitle">
-shop now
-                </span>
-            </h1>
-        </div>
-    </div>
-</div>
+<Directory />
 </div>
    )
 }
