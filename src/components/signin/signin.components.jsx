@@ -10,7 +10,7 @@ class Signin extends Component {
     }
     handleSubmit=(event)=>{
 event.preventDefault()
-this.setState({email:'',pasword:''})
+this.setState({email:'',password:''})
     }
     handleChange=(event)=>{
         const {value,name}=event.target;
@@ -23,7 +23,7 @@ this.setState({email:'',pasword:''})
 <span>sign in with your emai</span>
 <form onSubmit={this.handleSubmit}><input type="email" name="email" value={this.state.email } onChange={this.handleChange} required />
 <label>EMAIL</label><br></br>
-<input type="password" name="password" value={this.state.password } required />
+<input type="password" name="password" value={this.state.password } onChange={this.handleChange} required />
 <label>PASSWORD</label><br></br>
 <input type="submit" value="form submit"></input>
 </form>
