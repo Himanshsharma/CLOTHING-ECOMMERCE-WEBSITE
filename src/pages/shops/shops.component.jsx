@@ -9,7 +9,7 @@ constructor(){
     }
 }
     render() { 
-        return (  );
+        return ( <h1>shop</h1> );
     }
 }
  
