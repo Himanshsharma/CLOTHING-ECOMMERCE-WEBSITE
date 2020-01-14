@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
-const Custombutton=()=>{
-    <button className="custom-button"></button>
-}
+import './custombuttons.styles.scss';
+const Custombutton=({children ,...otherProps})=>(<button className="custom-button" {...otherProps}>{children}</button>
+)
+export default Custombutton;
