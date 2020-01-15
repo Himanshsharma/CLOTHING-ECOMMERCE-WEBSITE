@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './signin.styles.scss';
 import Custombutton from '../../components/Custom-buttons/custombutton.component';
 import Forminput from '../../components/form-input/form-input.component';
+import {signInWithGoogle} from '../../firebase/firebase.utilites';
 class Signin extends Component {
     constructor(props){
         super(props);
