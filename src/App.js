@@ -5,9 +5,23 @@ import './App.css';
 import SignInSignUp from './pages/signin-signup-page/signin-signup-page.component';
 import Shoppage from './pages/shops/shops.component';
 import Header from './components/header/header.component';
+import {auth} from './firebase/firebase.utilites';
 
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      currentuser:null
+    }
 
-function App() {
+  }
+  componentDidMount(){
+    auth.onAuthStateChanged(user=>{
+      this.setState({currentuser:user});
+      console.log(user)
+    })
+  }
+  render(){
   return (
     <div className="App">
     <Header />
@@ -19,7 +33,7 @@ function App() {
     </Switch>
     
     </div>
-  );
+  )};
 }
 
 export default App;
