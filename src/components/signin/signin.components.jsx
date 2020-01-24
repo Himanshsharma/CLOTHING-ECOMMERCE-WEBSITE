@@ -27,10 +27,10 @@ this.setState({email:'',password:''})
 <form onSubmit={this.handleSubmit}><Forminput label="EMAIL" type="email" name="email" value={this.state.email } handleChange={this.handleChange} required />
 
 <Forminput label="PASSWORD" type="password" name="password" value={this.state.password } handleChange={this.handleChange} required />
-
+<div className="buttons">
 <Custombutton type="submit">SIGNIN</Custombutton>
 
-<Custombutton onClick={signInWithGoogle}>SIGNIN WITH GOOGLE</Custombutton></form>
+<Custombutton onClick={signInWithGoogle} isGoogleSignIn>SIGNIN WITH GOOGLE</Custombutton></div></form>
 </div>  );
 }}
  
