@@ -31,6 +31,9 @@ console.log(error)
         }
     
         }
+        handlechange=e=>{
+            this.setstate([e.target.name]=e.target.value);
+        }
     render() { 
         const {displayName,email,password,confirmpassword}=this.state;
         return ( 
