@@ -13,9 +13,9 @@ class Signin extends Component {
     }
     handleSubmit=async (event)=>{
 event.preventDefault()
-this.setState({email:'',password:''})
 try{
     await auth.signInWithEmailAndPassword(this.state.email,this.state.password);
+    this.setState({email:'',password:''})
 
 
 }catch(error){
